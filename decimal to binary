@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+void d2b(int binnum)
+{
+    int ans = 0, pow = 1;
+    while (binnum > 0)
+    {
+        int rem = binnum % 10;
+        ans += (pow * rem);
+        binnum /= 10;
+        pow *= 2;
+    }
+    cout << ans;
+}
+int main()
+{
+    d2b(101);
+    return 0;
+}
