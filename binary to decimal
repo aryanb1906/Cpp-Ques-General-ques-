@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+void b2d(int decnum)
+{
+    int ans = 0, pow = 1;
+    while (decnum > 0)
+    {
+      int  rem = decnum % 2; // remainder
+        decnum /= 2;
+        ans += (pow * rem);
+        pow *= 10;
+    }
+    cout << ans;
+}
+int main()
+{
+    b2d(6);
+    return 0;
+}
